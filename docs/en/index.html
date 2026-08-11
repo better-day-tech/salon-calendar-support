@@ -6,9 +6,10 @@
 <title>Salon Calendar | Better Day Tech</title>
 <meta name="description" content="Salon Calendar turns a stylist's monthly availability into a polished image clients can read before they book.">
 <link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/site.js" defer></script>
 </head>
-<body>
-<header class="site-header">
+<body class="home" data-active-mode="stylish">
+<header class="site-header product-header">
   <a class="brand" href="./" aria-label="Salon Calendar home">
     <span class="brand-mark" aria-hidden="true"></span>
     <span>
@@ -17,297 +18,195 @@
     </span>
   </a>
   <nav class="nav" aria-label="Main navigation">
-    <a href="#features">Features</a>
     <a href="#styles">Styles</a>
-    <a href="#plans">Free / Pro</a>
+    <a href="#pro">Pro</a>
     <a href="#workflow">Workflow</a>
     <a href="#privacy">Privacy</a>
-    <a href="#faq">FAQ</a>
+    <a href="#support">Support</a>
     <a href="../">日本語</a>
   </nav>
 </header>
 
 <main>
-  <section class="hero">
+  <section class="cinema-hero" aria-labelledby="hero-title">
     <div class="hero-copy">
-      <p class="product-line">Salon Calendar</p>
-      <h1>Salon Calendar</h1>
-      <p class="hero-statement">Turn your monthly schedule into a booking-ready image.</p>
+      <h1 id="hero-title">Turn your monthly schedule into a booking-ready image.</h1>
       <p class="hero-lead">
-        Build a refined calendar image for work days, days off, booking availability, training and shoots,
-        ready for clients to check on your salon page or social channels before they book.
+        Work days, days off, booking slots, training and shoots. Salon Calendar turns the schedule clients check before booking
+        into a polished image for your salon page and social channels.
       </p>
       <div class="hero-actions">
-        <a class="button primary" href="#support">Get support</a>
-        <a class="button ghost" href="privacy.html">Privacy Policy</a>
+        <a class="button light" href="#styles">See the looks</a>
+        <a class="button dark" href="privacy.html">Privacy</a>
       </div>
-      <ul class="trust-list" aria-label="App highlights">
-        <li>Japanese holidays</li>
-        <li>Social export sizes</li>
-        <li>No account required</li>
-      </ul>
     </div>
 
-    <div class="hero-visual" aria-label="Example monthly schedule image created with Salon Calendar">
-      <div class="poster-stack">
-        <div class="poster-sheet">
-          <div class="poster-band">
-            <span>May 2026</span>
-            <strong>5</strong>
-            <span>Salon Calendar</span>
-          </div>
-          <div class="mini-week">
-            <span>SUN</span><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span>
-          </div>
-          <div class="mini-grid" aria-hidden="true">
-            <span class="muted"></span><span class="muted"></span><span class="muted"></span><span class="muted"></span><span class="muted"></span><span>1</span><span class="sat">2</span>
-            <span class="holiday">3</span><span class="holiday">4</span><span class="holiday">5</span><span class="holiday">6</span><span>7</span><span><b>8</b><em class="early">Early</em></span><span class="sat">9</span>
-            <span class="sun">10</span><span>11</span><span><b>12</b><em class="open">Open</em></span><span>13</span><span>14</span><span>15</span><span class="sat">16</span>
-            <span class="sun">17</span><span>18</span><span>19</span><span><b>20</b><em class="shoot">Shoot</em></span><span>21</span><span>22</span><span class="sat">23</span>
-            <span class="sun">24</span><span><b>25</b><em class="off">Off</em></span><span>26</span><span>27</span><span>28</span><span>29</span><span class="sat">30</span>
-            <span class="sun">31</span><span class="muted"></span><span class="muted"></span><span class="muted"></span><span class="muted"></span><span class="muted"></span><span class="muted"></span>
-          </div>
-          <p class="poster-footer">Designed for your salon page.</p>
+    <div class="poster-cinema" aria-label="Schedule images made with Salon Calendar">
+      <figure class="floating-poster poster-left">
+        <img src="../assets/showcase/editorial-clean.png" alt="A stylish monthly schedule image with generous whitespace" width="1080" height="1350">
+      </figure>
+      <figure class="floating-poster poster-center">
+        <img src="../assets/showcase/heart-wallpaper.png" alt="A cute monthly schedule image with soft pink hearts" width="1080" height="1350">
+      </figure>
+      <figure class="floating-poster poster-right">
+        <img src="../assets/showcase/mode-black.png" alt="A cool black monthly schedule image" width="1080" height="1350">
+      </figure>
+    </div>
+
+    <div class="hero-strip" aria-label="Main features">
+      <span>Japanese holidays</span>
+      <span>iPhone / iPad</span>
+      <span>3 export sizes</span>
+      <span>No account</span>
+    </div>
+  </section>
+
+  <section id="styles" class="mode-story" aria-labelledby="styles-title">
+    <div class="mode-sticky">
+      <div class="mode-copy">
+        <h2 id="styles-title"><span>Cute,</span><span>cool,</span><span>or quietly editorial.</span></h2>
+        <p>
+          A schedule image is part of the booking path. Salon Calendar keeps dates readable while letting the post
+          carry the mood of your salon, your feed and your personal brand.
+        </p>
+        <div class="mode-indicator" aria-hidden="true">
+          <span data-mode-dot="stylish">STYLISH</span>
+          <span data-mode-dot="cute">CUTE</span>
+          <span data-mode-dot="cool">COOL</span>
         </div>
       </div>
-      <div class="ratio-list" aria-label="Export sizes">
-        <span><i class="r r-square"></i>1:1</span>
-        <span><i class="r r-feed"></i>4:5</span>
-        <span><i class="r r-story"></i>9:16</span>
+      <div class="mode-visual" aria-hidden="true">
+        <img data-mode-image="stylish" src="../assets/showcase/editorial-clean.png" alt="" width="1080" height="1350">
+        <img data-mode-image="cute" src="../assets/showcase/heart-wallpaper.png" alt="" width="1080" height="1350">
+        <img data-mode-image="cool" src="../assets/showcase/mode-black.png" alt="" width="1080" height="1350">
       </div>
     </div>
+
+    <div class="mode-steps">
+      <article class="mode-step" data-mode-step="stylish">
+        <span>01</span>
+        <h3>Whitespace that feels professional.</h3>
+        <p>Fine rules, balanced dates and calm margins. A clean schedule image that works on salon pages and social feeds.</p>
+      </article>
+      <article class="mode-step" data-mode-step="cute">
+        <span>02</span>
+        <h3>Soft color and symbols for a cute post.</h3>
+        <p>Gentle colors, small symbols and friendly typography make the schedule feel approachable without losing clarity.</p>
+      </article>
+      <article class="mode-step" data-mode-step="cool">
+        <span>03</span>
+        <h3>Black, lines and restraint for a mode look.</h3>
+        <p>Dates stay readable even on a dark background, giving stylists a stronger personal-brand option.</p>
+      </article>
+    </div>
   </section>
 
-  <section id="features" class="section promise-section">
-    <div class="section-kicker">For stylists</div>
-    <div class="section-head">
-      <h2>Your schedule is part of the booking path.</h2>
+  <section id="pro" class="pro-section" aria-labelledby="pro-title">
+    <div class="pro-copy">
+      <h2 id="pro-title"><span>Start free.</span><span>Expand the finish with Pro.</span></h2>
       <p>
-        The image clients see before they book should feel as considered as the salon itself.
-        Salon Calendar keeps availability clear, polished and quick to publish each month.
+        The free version can create, edit, save and share monthly schedule images.
+        Pro adds templates, photo backgrounds and tag controls for stylists who want more visual range.
       </p>
     </div>
-    <div class="promise-grid">
-      <article>
-        <span class="number">01</span>
-        <h3>Tap dates to edit</h3>
-        <p>Set days off, work days, early or late shifts, booking status, training, shoots or custom labels.</p>
+
+    <div class="pro-stage">
+      <figure class="pro-poster free">
+        <span>FREE</span>
+        <img src="../assets/showcase/editorial-clean.png" alt="A clean schedule image available in the free version" width="1080" height="1350">
+      </figure>
+      <figure class="pro-poster pro">
+        <span>PRO</span>
+        <img src="../assets/showcase/photo-lead.png" alt="A photo-background schedule image available with Pro" width="1080" height="1350">
+      </figure>
+      <div class="pro-list" aria-label="Pro features">
+        <div><strong>Templates</strong><span>Additional cute, cool and editorial looks</span></div>
+        <div><strong>Photo backgrounds</strong><span>Square photo-background exports with Pro</span></div>
+        <div><strong>Tag controls</strong><span>Adjust tag placement, tag fonts and the finished tone</span></div>
+        <div><strong>Frames / light</strong><span>Static frame and light accents for still images</span></div>
+      </div>
+    </div>
+
+    <p class="subscription-note">
+      Pro is a monthly or yearly auto-renewable subscription. There is no weekly plan.
+      Price, duration and availability are shown in the App Store purchase sheet in the app.
+    </p>
+  </section>
+
+  <section id="workflow" class="workflow-showcase" aria-labelledby="workflow-title">
+    <div class="section-intro">
+      <h2 id="workflow-title"><span>Short, clear steps</span><span>each month.</span></h2>
+      <p>Choose a size, edit the schedule, then export and share. The flow is built for busy salon days.</p>
+    </div>
+
+    <div class="workflow-grid">
+      <article class="workflow-card">
+        <div>
+          <span>1</span>
+          <h3>Choose the post size first</h3>
+          <p>Square, portrait feed or story. Start with the place you will post.</p>
+        </div>
+        <img src="../assets/showcase/workflow-schedule-en.png" alt="The Salon Calendar schedule editing screen" width="1320" height="2868">
       </article>
-      <article>
-        <span class="number">02</span>
-        <h3>Shape the look</h3>
-        <p>Adjust background, type, color and text backing so the calendar stays readable over photos.</p>
+      <article class="workflow-card">
+        <div>
+          <span>2</span>
+          <h3>Edit schedule and finish together</h3>
+          <p>Bulk weekday entry, label-name editing, backgrounds and readability controls keep the image clear.</p>
+        </div>
+        <img src="../assets/showcase/workflow-background-en.png" alt="The background and readability adjustment screen" width="1320" height="2868">
       </article>
-      <article>
-        <span class="number">03</span>
-        <h3>Publish where clients look</h3>
-        <p>Export square, portrait-feed and story sizes, then save to Photos or share to another app. Square exports are photo-free in the free version, and Pro unlocks square photo backgrounds.</p>
-      </article>
-      <article>
-        <span class="number">04</span>
-        <h3>Local-first by design</h3>
-        <p>Your schedule and images stay on your device. No account, ad SDK, analytics SDK or third-party SDK.</p>
+      <article class="workflow-card">
+        <div>
+          <span>3</span>
+          <h3>Save and share the finished image</h3>
+          <p>Save to Photos or send the exported image to social apps and salon-page workflows.</p>
+        </div>
+        <img src="../assets/showcase/workflow-export-en.png" alt="The export and sharing screen" width="1320" height="2868">
       </article>
     </div>
   </section>
 
-  <section id="styles" class="section style-section">
-    <div class="section-kicker">Style range</div>
-    <div class="section-head compact">
-      <h2>Cute, cool and editorial looks.</h2>
-      <p>
-        Version 1.1 strengthens the template direction so the image can carry your style, not just your schedule.
-        The free version still covers the basics, while Pro adds more room to shape the mood of each post.
-      </p>
-    </div>
-    <div class="style-grid" aria-label="Version 1.1 template examples">
-      <article class="style-card editorial">
-        <span class="style-label">Free starter</span>
-        <h3>Editorial Clean</h3>
-        <p>Whitespace and fine rules keep the monthly schedule polished and easy to read before booking.</p>
-      </article>
-      <article class="style-card cute">
-        <span class="style-label">Pro</span>
-        <h3>Heart Wallpaper</h3>
-        <p>Soft backgrounds, hearts and gentle type for a cute social post.</p>
-      </article>
-      <article class="style-card cool">
-        <span class="style-label">Pro</span>
-        <h3>Mode Collage</h3>
-        <p>Photo layering, large month numbers and thin linework for a fashion-editorial feel.</p>
-      </article>
-    </div>
-  </section>
-
-  <section id="plans" class="section plan-section">
-    <div class="section-kicker">Free / Pro</div>
-    <div class="section-head compact">
-      <h2>Start free. Add Pro when you want more finish.</h2>
-      <p>
-        Salon Calendar can create, save and share monthly schedule images for free.
-        Pro is an optional add-on for users who want more visual range in their posts.
-      </p>
-    </div>
-    <div class="plan-grid">
-      <article class="plan-card">
-        <span class="plan-label">Free</span>
-        <h3>Share your monthly schedule clearly</h3>
-        <ul>
-          <li>Monthly calendar creation</li>
-          <li>Schedule labels, editable label names, weekday bulk entry and custom text</li>
-          <li>Standard templates and standard backgrounds</li>
-          <li>Three export sizes, sharing and saving to Photos</li>
-        </ul>
-      </article>
-      <article class="plan-card featured">
-        <span class="plan-label">Pro</span>
-        <h3>More looks for your posts</h3>
-        <p class="plan-intro">Pro is available as a monthly or yearly auto-renewable subscription. There is no weekly plan.</p>
-        <ul>
-          <li>Additional cute, cool and editorial templates</li>
-          <li>Additional backgrounds and photo-aware finishing options</li>
-          <li>Square photo backgrounds</li>
-          <li>Additional frames such as film-style borders</li>
-          <li>Static light accents for finished images</li>
-          <li>Tag placement and tag font adjustments</li>
-        </ul>
-        <p class="plan-note">
-          Pro is an auto-renewable subscription. Price, duration and availability are shown in the App Store purchase sheet in the app.
-          Purchase, restore, cancellation and refund handling are processed by Apple through the App Store.
-        </p>
-      </article>
-    </div>
-  </section>
-
-  <section id="workflow" class="section workflow-section">
-    <div class="section-kicker">Workflow</div>
-    <div class="section-head compact">
-      <h2>Three steps each month.</h2>
-      <p>Choose the post size, enter the schedule, export a polished image. The flow is made for busy salon days.</p>
-    </div>
-    <ol class="workflow">
-      <li>
-        <span>1</span>
-        <h3>Choose the post size</h3>
-        <p>Start with square, portrait-feed or story size so the design matches where you will post it.</p>
-      </li>
-      <li>
-        <span>2</span>
-        <h3>Set the month and schedule</h3>
-        <p>Choose the month, then add labels by date or weekday. Japanese public holidays are calculated automatically.</p>
-      </li>
-      <li>
-        <span>3</span>
-        <h3>Export and share</h3>
-        <p>Export the preview as an image for feed posts, stories and salon pages, then save or share it from iOS.</p>
-      </li>
-    </ol>
-  </section>
-
-  <section id="privacy" class="section privacy-ribbon">
+  <section id="privacy" class="privacy-band" aria-labelledby="privacy-title">
     <div>
-      <div class="section-kicker">Local first</div>
-      <h2>Your schedule and salon information stay on your device.</h2>
+      <h2 id="privacy-title">Your schedule and photos stay on your device.</h2>
+      <p>
+        No account, no advertising SDK and no analytics SDK. Schedule data is not sent to a developer-operated server.
+        Pro purchases and subscription checks are processed through Apple's App Store / StoreKit systems.
+      </p>
     </div>
-    <ul>
-      <li>No account or login</li>
-      <li>No schedule data sent to a developer-operated server</li>
-      <li>No ads, analytics or third-party SDKs</li>
-      <li>Support pages open only when you choose to visit them</li>
-    </ul>
+    <a class="button light" href="privacy.html">Privacy Policy</a>
   </section>
 
-  <section class="section specs-section">
-    <div class="section-kicker">Specifications</div>
-    <div class="spec-layout">
-      <div>
-        <h2>App details</h2>
-        <p>Basic information for App Store review, salon teams and support checks.</p>
-      </div>
-      <table>
-        <tr><th>Requires</th><td>iOS 17.0 or later</td></tr>
-        <tr><th>Devices</th><td>iPhone / iPad</td></tr>
-        <tr><th>Export sizes</th><td>1080×1080, 1080×1350, 1080×1920</td></tr>
-        <tr><th>Price</th><td>The app is free. Pro is an optional monthly or yearly auto-renewable subscription.</td></tr>
-        <tr><th>Week start</th><td>Sunday or Monday, switchable</td></tr>
-        <tr><th>Holidays</th><td>Japanese public holidays, substitute holidays and citizens' holidays (2007–2099)</td></tr>
-        <tr><th>Network</th><td>No data is sent to any server we operate. No account required.</td></tr>
-      </table>
+  <section id="support" class="support-section" aria-labelledby="support-title">
+    <div class="support-copy">
+      <h2 id="support-title">Need help or want to request an improvement?</h2>
+      <p>
+        Questions, bug reports and feature requests are handled through GitHub Issues.
+        Issue content is public. Please do not include client names, contact details, appointment details or photographs taken at work.
+      </p>
+    </div>
+    <div class="support-actions">
+      <a class="button dark" href="https://github.com/better-day-tech/salon-calendar-support/issues">GitHub Issues</a>
+      <a class="button light" href="https://github.com/better-day-tech/salon-calendar-support/security/advisories/new">Report privately</a>
     </div>
   </section>
 
-  <section id="faq" class="section faq-section">
-    <div class="section-kicker">FAQ / Support</div>
-    <div class="faq-layout">
-      <div>
-        <h2>Frequently asked questions</h2>
-        <p>If something looks wrong or export does not behave as expected, start here.</p>
-      </div>
-      <div class="faq-list">
-        <details open>
-          <summary>Where is my schedule stored?</summary>
-          <p>On your device. Nothing is sent to any server we operate. If you back up your device, the data may be included in that backup.</p>
-        </details>
-        <details>
-          <summary>Will my schedule transfer to a new device?</summary>
-          <p>Yes, if you restore from a device backup. Transfers that do not go through a backup will not carry the data over, so we recommend exporting anything important as an image first.</p>
-        </details>
-        <details>
-          <summary>What is the difference between Free and Pro?</summary>
-          <p>The free version can create monthly schedules, enter labels, edit label names, use standard templates and backgrounds, export three sizes, share images and save to Photos. Pro unlocks square photo backgrounds, additional cute, cool and editorial templates, backgrounds, frames, light accents, tag placement and tag font adjustments.</p>
-        </details>
-        <details>
-          <summary>Where can I purchase, restore or cancel Pro?</summary>
-          <p>Tap a Pro feature in the app to open the purchase screen. Pro is offered as monthly or yearly. If you already purchased Pro, use Restore Purchases on that screen. Cancellation and renewal management are available through Manage Subscription on the purchase screen, or in your App Store account settings.</p>
-        </details>
-        <details>
-          <summary>Will my schedule disappear if I cancel Pro?</summary>
-          <p>No. Schedules, headings, label names and imported photos remain. If Pro expires, square photo backgrounds and Pro-only templates, backgrounds, frames, light accents and tag adjustments fall back to free visual options.</p>
-        </details>
-        <details>
-          <summary>A public holiday looks wrong.</summary>
-          <p>Holidays are calculated from the rules in Japanese law. When the law changes, we update the app. Please let us know if you spot a discrepancy.</p>
-        </details>
-        <details>
-          <summary>I can't save the image to Photos.</summary>
-          <p>Permission to add photos may be turned off. Go to Settings -> Apps -> Salon Calendar -> Photos and allow adding photos. You can also share the image directly to another app using the share button.</p>
-        </details>
-        <details>
-          <summary>Dates are hard to read over my background photo.</summary>
-          <p>In the Background tab, increase the text backing or add blur. Text color switches automatically based on photo brightness, and you can also set it manually.</p>
-        </details>
-        <details>
-          <summary>Can I make video or GIF calendars?</summary>
-          <p>The current version creates, saves and shares still calendar images. It does not edit video or export GIF/MP4 or animated calendar files.</p>
-        </details>
-        <details>
-          <summary>Can I use exported images for commercial promotion?</summary>
-          <p>Yes. The exported images are yours. If you imported your own photo as a background, please make sure you hold the rights to that photo.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <section id="support" class="section contact-section">
-    <div class="contact-panel">
-      <div>
-        <div class="section-kicker">Contact</div>
-        <h2>Support</h2>
-        <p>
-          Questions, bug reports and feature requests are handled through GitHub Issues.
-          Issue content is public. Please do not include client names, contact details,
-          appointment details or photographs taken at work.
-          For anything touching on security or privacy, please use the private channel rather than a public issue.
-        </p>
-        <p class="note">
-          This app is developed and maintained by one person, so we may not be able to reply to every message individually,
-          and we cannot promise a timeframe for any particular fix.
-        </p>
-      </div>
-      <div class="contact-actions">
-        <a class="button primary" href="https://github.com/better-day-tech/salon-calendar-support/issues">GitHub Issues</a>
-        <a class="button ghost" href="https://github.com/better-day-tech/salon-calendar-support/security/advisories/new">Report privately</a>
-      </div>
+  <section class="faq-section compact-faq" aria-labelledby="faq-title">
+    <h2 id="faq-title">FAQ</h2>
+    <div class="faq-list">
+      <details open>
+        <summary>What is the difference between Free and Pro?</summary>
+        <p>The free version can create monthly schedules, edit label names, use standard templates, export three sizes, share images and save to Photos. Pro unlocks additional templates, square photo backgrounds, backgrounds, frames, light accents, tag placement and tag font adjustments.</p>
+      </details>
+      <details>
+        <summary>Can I make video or GIF calendars?</summary>
+        <p>The current version creates, saves and shares still calendar images. It does not edit video or export GIF/MP4 or animated calendar files.</p>
+      </details>
+      <details>
+        <summary>Can I use exported images for commercial promotion?</summary>
+        <p>Yes. The exported images are yours. If you imported your own photo as a background, please make sure you hold the rights to that photo.</p>
+      </details>
     </div>
   </section>
 </main>
