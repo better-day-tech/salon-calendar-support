@@ -505,6 +505,131 @@ strong { font-weight: 650; }
   font-family: var(--serif);
 }
 
+.style-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 48px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.style-card {
+  min-height: 340px;
+  position: relative;
+  overflow: hidden;
+  padding: clamp(24px, 3.5vw, 42px);
+  background: var(--surface);
+}
+
+.style-card::before,
+.style-card::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.style-card::before {
+  inset: 22px;
+  border: 1px solid rgba(86, 57, 40, 0.16);
+}
+
+.style-card::after {
+  right: 30px;
+  bottom: 28px;
+  width: 82px;
+  height: 82px;
+  opacity: 0.72;
+}
+
+.style-card h3,
+.style-card p,
+.style-label {
+  position: relative;
+  z-index: 1;
+}
+
+.style-card h3 {
+  margin-top: 76px;
+  font-size: clamp(1.45rem, 2.2vw, 2.15rem);
+}
+
+.style-card p {
+  max-width: 280px;
+  margin-top: 16px;
+  font-size: 0.94rem;
+}
+
+.style-label {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  padding: 0 10px;
+  border: 1px solid currentColor;
+  color: var(--brown-2);
+  font-size: 0.68rem;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.style-card.editorial {
+  background:
+    linear-gradient(90deg, rgba(86,57,40,0.06) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(86,57,40,0.045) 1px, transparent 1px),
+    var(--surface);
+  background-size: 34px 34px;
+}
+
+.style-card.editorial::after {
+  height: 28px;
+  border-top: 1px solid var(--brown-2);
+  border-bottom: 1px solid var(--brown-2);
+  transform: rotate(-8deg);
+}
+
+.style-card.cute {
+  background:
+    radial-gradient(circle at 78% 22%, rgba(226, 162, 181, 0.34), transparent 8rem),
+    linear-gradient(145deg, #fff9fa, #f6e7eb);
+}
+
+.style-card.cute::after {
+  width: 58px;
+  height: 52px;
+  background:
+    radial-gradient(circle at 30% 30%, #9b3d4d 0 28px, transparent 29px),
+    radial-gradient(circle at 70% 30%, #9b3d4d 0 28px, transparent 29px),
+    linear-gradient(45deg, #9b3d4d 0 38px, transparent 39px);
+  transform: rotate(-45deg);
+  transform-origin: center;
+}
+
+.style-card.cool {
+  color: #f6f0e7;
+  background:
+    linear-gradient(90deg, rgba(246,240,231,0.14) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(246,240,231,0.10) 1px, transparent 1px),
+    linear-gradient(145deg, #1c1b1c, #3b302c 72%);
+  background-size: 30px 30px, 30px 30px, auto;
+}
+
+.style-card.cool::before {
+  border-color: rgba(246, 240, 231, 0.22);
+}
+
+.style-card.cool::after {
+  border: 1px solid rgba(246, 240, 231, 0.34);
+  transform: rotate(8deg);
+  box-shadow: -42px -28px 0 -16px rgba(246, 240, 231, 0.18);
+}
+
+.style-card.cool h3,
+.style-card.cool p,
+.style-card.cool .style-label {
+  color: #f6f0e7;
+}
+
 .plan-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -529,6 +654,11 @@ strong { font-weight: 650; }
 
 .plan-card h3 {
   margin-top: 22px;
+}
+
+.plan-intro {
+  margin-top: 14px;
+  font-size: 0.9rem;
 }
 
 .plan-card.featured h3,
@@ -914,6 +1044,10 @@ details p {
   }
 
   .workflow {
+    grid-template-columns: 1fr;
+  }
+
+  .style-grid {
     grid-template-columns: 1fr;
   }
 
