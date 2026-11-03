@@ -393,7 +393,9 @@ body:not(.home) .site-header::before {
 
 html[lang="ja"] .pro-copy h2 span {
   display: inline-block;
-  white-space: nowrap;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .eyebrow {
@@ -998,6 +1000,10 @@ details p {
 
   .pro-section {
     padding-inline: 14px;
+  }
+
+  html[lang="ja"] .pro-copy h2 {
+    font-size: clamp(1.8rem, 9vw, 2.55rem);
   }
 
   .pro-stage {
