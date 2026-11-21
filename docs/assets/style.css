@@ -1056,3 +1056,13 @@ details p {
     justify-content: flex-start;
   }
 }
+
+/* Keep all three examples visible and compare plans without implying free photos need Pro. */
+.poster-cinema { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; align-items: center; min-height: 0; padding: 36px 0 110px; }
+.poster-cinema .floating-poster { position: relative; inset: auto; width: 100%; transform: none; }
+.plan-comparison { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-top: 32px; }
+.plan-comparison article { border: 1px solid #777; border-radius: 12px; padding: 24px; }
+.plan-comparison h3 { margin: 0 0 16px; font-size: 1.5rem; }
+.plan-comparison li { margin-bottom: 10px; }
+.home-ja .pro-copy h2, .home-ja .section-intro h2, .home-ja .privacy-band h2, .home-ja .support-section h2, .home-ja .faq-section h2 { font-size: clamp(1.8rem, 4vw, 3.3rem); line-height: 1.25; text-wrap: pretty; }
+@media (max-width: 720px) { .plan-comparison { grid-template-columns: 1fr; } .poster-cinema { gap: 8px; padding-bottom: 110px; } }
