@@ -1072,3 +1072,16 @@ details p {
   .poster-cinema { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 74%; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 8px 0 20px; }
   .poster-cinema .floating-poster { scroll-snap-align: center; }
 }
+
+/* The examples remain a native scroll region, including without JavaScript. */
+.poster-navigation { display: none; }
+.poster-cinema:focus-visible { outline: 3px solid var(--rose-strong); outline-offset: 4px; }
+@media (max-width: 720px) {
+  .poster-navigation { display: grid; gap: 12px; padding: 0 0 20px; }
+  .poster-navigation p { margin: 0; font-size: 0.9rem; line-height: 1.6; }
+  .poster-buttons { display: flex; justify-content: space-between; gap: 12px; }
+  .poster-buttons[hidden] { display: none; }
+  .poster-buttons button { min-height: 44px; padding: 8px 14px; border: 1px solid currentColor; border-radius: 6px; color: inherit; background: transparent; font: inherit; cursor: pointer; }
+  .poster-buttons button:disabled { opacity: 0.45; cursor: default; }
+  .poster-buttons button:focus-visible { outline: 3px solid var(--rose-strong); outline-offset: 3px; }
+}

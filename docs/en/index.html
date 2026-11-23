@@ -41,7 +41,7 @@
       </div>
     </div>
 
-    <div class="poster-cinema" aria-label="Schedule images made with Salon Calendar">
+    <div id="poster-examples" class="poster-cinema" role="region" tabindex="0" aria-describedby="poster-help" aria-label="Schedule images made with Salon Calendar">
       <figure class="floating-poster poster-left">
         <img src="../assets/showcase/editorial-clean.png" alt="A stylish monthly schedule image with generous whitespace" width="1080" height="1350">
       </figure>
@@ -51,6 +51,14 @@
       <figure class="floating-poster poster-right">
         <img src="../assets/showcase/mode-black.png" alt="A cool black monthly schedule image" width="1080" height="1350">
       </figure>
+    </div>
+
+    <div class="poster-navigation" role="group" aria-label="Example navigation">
+      <p id="poster-help">Swipe to see all three examples, or use the left and right arrow keys.</p>
+      <div class="poster-buttons" hidden>
+        <button type="button" data-poster-step="-1" aria-controls="poster-examples">← Previous example</button>
+        <button type="button" data-poster-step="1" aria-controls="poster-examples">Next example →</button>
+      </div>
     </div>
 
     <div class="hero-strip" aria-label="Main features">

@@ -38,7 +38,7 @@
       </div>
     </div>
 
-    <div class="poster-cinema" aria-label="サロンカレンダーで作れる投稿画像">
+    <div id="poster-examples" class="poster-cinema" role="region" tabindex="0" aria-describedby="poster-help" aria-label="サロンカレンダーで作れる投稿画像">
       <figure class="floating-poster poster-left">
         <img src="assets/showcase/editorial-clean.png" alt="余白を活かしたスタイリッシュな月間予定画像" width="1080" height="1350">
       </figure>
@@ -48,6 +48,14 @@
       <figure class="floating-poster poster-right">
         <img src="assets/showcase/mode-black.png" alt="黒を基調にしたかっこいい月間予定画像" width="1080" height="1350">
       </figure>
+    </div>
+
+    <div class="poster-navigation" role="group" aria-label="作例の移動">
+      <p id="poster-help">左右にスワイプして、3つの作例を見られます。キーボードでは左右キーで移動できます。</p>
+      <div class="poster-buttons" hidden>
+        <button type="button" data-poster-step="-1" aria-controls="poster-examples">← 前の作例</button>
+        <button type="button" data-poster-step="1" aria-controls="poster-examples">次の作例 →</button>
+      </div>
     </div>
 
     <div class="hero-strip" aria-label="主な機能">
